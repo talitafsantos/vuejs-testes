@@ -1,9 +1,12 @@
 <script setup lang="ts">
-import TheWelcome from '../components/TheWelcome.vue'
+import { ref } from 'vue/dist/vue.js';
+import ProductCard from '@/components/ProductCard/ProductCard.vue'
+
+const product = ref([{title: 'Titulo', body:'lorem ipsum dolor sit amet'}])
 </script>
 
 <template>
   <main>
-    <TheWelcome />
+    <ProductCard :product="product"/>
   </main>
 </template>

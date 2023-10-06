@@ -12,5 +12,11 @@ export default defineConfig({
     alias: {
       '@': fileURLToPath(new URL('./src', import.meta.url))
     }
-  }
+  },
+  test: {
+    coverage: {
+      provider: 'istanbul', // or 'v8'
+      reporter: ['text', 'json', 'html'],
+    },
+  },
 })
